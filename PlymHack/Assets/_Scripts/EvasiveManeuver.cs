@@ -28,7 +28,7 @@ public class EvasiveManeuver : MonoBehaviour
         
         while(true)
         {
-            targetManeuver = Random.Range(1, dodge) * Mathf.Sign(transform.position.x);
+            targetManeuver = Random.Range(1, dodge) * -Mathf.Sign(transform.position.x);
             yield return new WaitForSeconds(Random.Range(maneuverTime.x, maneuverTime.y));
             targetManeuver = 0;
             yield return new WaitForSeconds(Random.Range(maneuverWait.x, maneuverWait.y));
@@ -38,10 +38,11 @@ public class EvasiveManeuver : MonoBehaviour
     void FixedUpdate()
     {
         float newManeuver = Mathf.MoveTowards(rb.velocity.x, targetManeuver, Time.deltaTime * smoothing);
-        rb.velocity = new Vector2(newManeuver, currentSpeed);
-        rb.position = new Vector2(
+        rb.velocity = new Vector3(newManeuver, 0.0f, currentSpeed);
+        rb.position = new Vector3(
             Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
-            Mathf.Clamp(rb.position.y, boundary.yMin, boundary.yMax)
+            Mathf.Clamp(rb.position.y, boundary.yMin, boundary.yMax),
+            0.0f
             );
     }
 

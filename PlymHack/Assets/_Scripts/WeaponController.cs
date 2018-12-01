@@ -7,14 +7,14 @@ public class WeaponController : MonoBehaviour
     public GameObject shot;
     public Transform shotSpawn;
     public float fireRate;
-    public float delay;
+    public Vector2 delay;
 
-    [SerializeField]
     private AudioSource audioSource;
 
     void Start()
     {
-        InvokeRepeating("Fire", delay, fireRate);
+        audioSource = GetComponent<AudioSource>();
+        InvokeRepeating("Fire", Random.Range(delay.x, delay.y), fireRate    );
     }
 
     void Fire()
