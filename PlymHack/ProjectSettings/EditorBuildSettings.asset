@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/_Scenes/MainMenu.unity
+    guid: 92f891170bf6bea4a84580027c08160c
+  - enabled: 1
+    path: Assets/_Scenes/Doggo.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
