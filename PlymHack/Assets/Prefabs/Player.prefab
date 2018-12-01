@@ -247,6 +247,7 @@ MonoBehaviour:
   shot: {fileID: 1422814584025768, guid: 46b80e21049c53d41b2a9957a241996c, type: 2}
   shotSpawn: {fileID: 4779220005141142}
   fireRate: 0.5
+  pauseMenuObject: {fileID: 0}
 --- !u!198 &198565418094638998
 ParticleSystem:
   m_ObjectHideFlags: 1
