@@ -371,10 +371,10 @@ MonoBehaviour:
   maneuverWait: {x: 1, y: 2}
   maneuverTime: {x: 1, y: 2}
   boundary:
-    xMin: -12.3
-    xMax: 12.3
-    yMin: -3.9
-    yMax: 3.9
+    xMin: -16.83
+    xMax: 16.83
+    yMin: -9.12
+    yMax: 9.12
 --- !u!114 &114078824367800288
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -96,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1744773431468652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.43, y: -0.24, z: 0}
+  m_LocalPosition: {x: -12.43, y: 9.12, z: 0}
   m_LocalScale: {x: 0.2248456, y: 0.22831886, z: 1}
   m_Children:
   - {fileID: 4779220005141142}
@@ -241,8 +241,8 @@ MonoBehaviour:
   boundary:
     xMin: -12
     xMax: -5
-    yMin: -3.9
-    yMax: 3.9
+    yMin: -9.12
+    yMax: 9.12
   rigidbody: {fileID: 54874811948812560}
   shot: {fileID: 1422814584025768, guid: 46b80e21049c53d41b2a9957a241996c, type: 2}
   shotSpawn: {fileID: 4779220005141142}
