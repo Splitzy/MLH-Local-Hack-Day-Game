@@ -8,17 +8,28 @@ public class DestroyByContact : MonoBehaviour
     public GameObject playerExplode;
     public int enemyScore;
     private GameController gameController;
+    private CameraShake cameraShake;
 
     void Start()
     {
-        GameObject gameControllerObject = GameObject.FindWithTag("GameController"); 
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        GameObject cameraShakeObject = GameObject.FindWithTag("CameraShake");
         if(gameControllerObject != null)
         {
             gameController = gameControllerObject.GetComponent<GameController>();
         }
         else
         {
-            Debug.Log("Can't find Game Controller script");
+            Debug.Log("Can't find GameController script");
+        }
+        
+        if(cameraShakeObject != null)
+        {
+            cameraShake = cameraShakeObject.GetComponent<CameraShake>();
+        }
+        else
+        {
+            Debug.Log("Can't find CameraShake script");
         }
     }
 
@@ -33,12 +44,14 @@ public class DestroyByContact : MonoBehaviour
         if(enemyExplode != null)
         {
             Instantiate(enemyExplode, transform.position, transform.rotation);
+            cameraShake.ShakeIt();
         }
         
 
         if(other.tag == "Player")
         {
             Instantiate(playerExplode, other.transform.position, other.transform.rotation);
+            cameraShake.ShakeIt();
             gameController.GameOver();
         }
 
