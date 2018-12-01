@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public float waveWait;
 
     public Text scoreText;
+    public Text scoreText2;
     public GameObject gameOverUI;
     private int score;
 
@@ -75,6 +76,7 @@ public class GameController : MonoBehaviour
     void UpdateScore()
     {
         scoreText.text = "Score: " + score;
+        scoreText2.text = "Score: " + score;
     }
 
     public void GameOver()
